@@ -1,5 +1,66 @@
-/*
 
-write your code here
+@media print {
+    .tm-sidebar, .tm-team-img, 
+    .gallery-container, .carousel-indicators,
+    .img-contact-us, #contact {
+        display: none;
+    }
 
-*/
+    .tm-main-content {
+        padding-top: 0px;
+    }
+
+    h2.tm-section-title, .padding-medium>h2 {
+        text-decoration: none;
+        color: lightskyblue;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+
+    .tm-content-box {
+        margin-bottom: 4px;
+    }
+
+    .padding-medium {
+        padding: 0px 40px 0px 40px;
+    }
+
+    .carousel {
+        padding: 0px 50px 0px 50px;
+    }
+
+    .tm-footer {
+        padding-bottom: 0px;
+    }
+
+    .tm-team-description-container {
+        max-width: none;
+    }
+
+    .tm-section-description {
+        text-align: center;
+    }
+
+    .blocks>.tm-team-description-container>p:last-child {
+        font-style: oblique;
+        word-spacing: 1.5em;
+        letter-spacing: 2px;
+    }
+
+    .padding-medium>ol {
+        padding: 0px 150px 0px 150px;
+    }
+
+    .padding-medium>ol>li {
+        list-style-type: none;
+    }
+
+    .padding-medium>ol>li:nth-child(even) {
+        text-align: left;
+    }
+
+    .padding-medium>ol>li:nth-child(odd) {
+         text-align: right;
+    }
+ }
