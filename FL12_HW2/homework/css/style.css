@@ -161,5 +161,30 @@
         content: "";
         border-top: 50px solid lightskyblue;
         border-right: 50px solid transparent;
+    }
+
+    .blocks li:nth-child(2n + 1) {
+        background-color: lightskyblue;
+        color: #fff;
+    }
+
+    .box-work div p::first-letter {
+    font-weight: bold;
+    }
+
+    .tm-section-description {
+    text-indent: 25px;
+    line-height: 30px;
+    }
+
+    .submit-btn {
+        border-color: lightskyblue;
+        background-color: #fff;
+        color: lightskyblue;
+        float: right;
+        padding: 10px 15px;
+        font-size: 14px;
       }
+    
+
  }
