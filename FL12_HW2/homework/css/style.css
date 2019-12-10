@@ -64,22 +64,102 @@
          text-align: right;
     }
  }
+ @media screen {
+    .tm-nav-item-link:hover {
+        background: lightskyblue;
+        color: #fff
+    }
 
- .tm-nav-item-link:hover {
-     background: lightskyblue;
-     color: #fff
+    .tm-banner {
+        background-image: linear-gradient(to right, lightskyblue, burlywood);
+    }
+
+    .tm-banner-inner {
+        background: #fff;
+    }
+
+    .tm-banner-text {
+        text-shadow: 3px 3px 3px #333;
+        animation-duration: 4s;
+        animation-name: slidein;
+    }
+
+    @keyframes slidein {
+        from {
+          transform: translateX(200px);
+        }
+    
+        to {
+          transform: translateX(0);
+        }
+      }
+
+    .flex-2-col {
+        display: flex;
+        align-items: center;
+      }
+    
+      .tm-section-title {
+        text-align: center;
+      }
+    
+      .tm-team-description-container p:nth-of-type(1),
+      .tm-team-description-container p:nth-of-type(2) {
+        text-indent: 25px;
+        text-align: left;
+      }
+
+      li>h2:hover {
+        background-color: lightgrey;
+        color: lightskyblue;
+      }
+
+      
+    .heading h2 {
+        text-align: center;
+        color: lightskyblue;
+    }
+
+    .tm-content-box ol {
+        list-style-type: lower-alpha;
+    }
+
+    .heading a:hover::before {
+        content: ">";
+        display: inline-block;
+
+        color: #333;
+    }
+
+    .heading li:nth-child(1)::after,
+    .heading li:nth-child(3)::after {
+        content: "New";
+        font-weight: bold;
+        font-variant: small-caps;
+        vertical-align: super;
+
+        font-size: 11px;
+        color: red;
+    }
+
+    .blocks>.tm-team-description-container>p:last-child {
+        font-style: oblique;
+        word-spacing: 10px;
+        letter-spacing: 5px;
+    }
+
+    .blocks .tm-content-box {
+        box-shadow: none;
+    }
+    
+    .blocks h2 {
+        display: flex;
+        align-self: flex-start;
+    }
+
+    section::before {
+        content: "";
+        border-top: 50px solid lightskyblue;
+        border-right: 50px solid transparent;
+      }
  }
-
- .tm-banner {
-    background-image: linear-gradient(to right, lightskyblue, burlywood);
- }
-
- .tm-banner-inner {
-    background: #fff;
- }
-
- .tm-banner-text {
-    text-shadow: 3px 3px 3px #333;
- }
-
- 
