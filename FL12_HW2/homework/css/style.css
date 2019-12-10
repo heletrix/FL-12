@@ -64,3 +64,22 @@
          text-align: right;
     }
  }
+
+ .tm-nav-item-link:hover {
+     background: lightskyblue;
+     color: #fff
+ }
+
+ .tm-banner {
+    background-image: linear-gradient(to right, lightskyblue, burlywood);
+ }
+
+ .tm-banner-inner {
+    background: #fff;
+ }
+
+ .tm-banner-text {
+    text-shadow: 3px 3px 3px #333;
+ }
+
+ 
