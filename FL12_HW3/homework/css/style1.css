@@ -1,5 +1,5 @@
 body {
-  background-color: #2c2f3c; }
+  background-color: #ffffff; }
 
 .header {
   background-image: url("../img/m-h-day.jpg");
@@ -31,16 +31,16 @@ body {
 .header_heading {
   padding: 20px 0 20px 0;
   width: 300px;
-  font-family: "Source Sans Pro", sans-serif;
   font-size: 40px;
   line-height: 30pt;
-  font-weight: bold;
+  font-weight: bold; }
+
+.usual-font, .header_heading, .header_text {
+  font-family: "Source Sans Pro", sans-serif;
   color: #2c2f3c; }
 
 .header_text {
   width: 580;
-  color: #2c2f3c;
-  font-family: "Source Sans Pro", sans-serif;
   padding-bottom: 20px; }
 
 .header_button {
