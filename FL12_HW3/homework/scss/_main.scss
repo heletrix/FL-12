@@ -6,7 +6,7 @@ $fonts: (
 );
 
 body {
-    background-color:$main-font-color;
+    background-color:$background-main;
 }
 
 .header {
@@ -47,17 +47,20 @@ body {
 .header_heading {
     padding: 20px 0 20px 0;
     width:300px;
-    font-family: map-get($fonts, $font-family-h), sans-serif;;
     font-size: 40px;
     line-height: 30pt;
     font-weight: bold;
+    @extend .usual-font;
+}
+
+.usual-font {
+    font-family: map-get($fonts, $font-family-h), sans-serif;
     color: $main-font-color;
 }
 
 .header_text {
+    @extend .usual-font;
     width: 580;
-    color: $main-font-color;
-    font-family: map-get($fonts, $font-family-h), sans-serif;;
     padding-bottom: 20px;
 }
 
