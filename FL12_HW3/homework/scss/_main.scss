@@ -1,1 +1,229 @@
 // Write your styles here
+$fonts: (
+    "f1": "Source Sans Pro",
+    "f2": "Hind",
+    "f3": "Fresca"
+);
+
+body {
+    background-color:$main-font-color;
+}
+
+.header {
+    background-image: url($background-h);
+    background-size: 100%;
+    background-position-y: center;
+    border-radius: 0 0 500px / 200px 0;
+    padding: 0 20px 20px 20px; 
+}
+
+.header-wrap {
+    padding: 5px 45% 140px 7%;
+}
+
+.landing-logo {
+    img {
+        float:left;
+    }
+
+    p {
+        padding: 5px 0 0 30px ;
+        font-family: map-get($fonts, $font-family-h), sans-serif;
+        font-size: 22px;
+        font-weight: bold;
+        float: none;
+        color: $main-font-color;
+        text-align: center;
+        width: 100px;
+        line-height: 13pt;
+        span {
+            display: block;
+            font-size: 8px;
+            font-weight: 100;
+        }
+    }
+}
+
+.header_heading {
+    padding: 20px 0 20px 0;
+    width:300px;
+    font-family: map-get($fonts, $font-family-h), sans-serif;;
+    font-size: 40px;
+    line-height: 30pt;
+    font-weight: bold;
+    color: $main-font-color;
+}
+
+.header_text {
+    width: 580;
+    color: $main-font-color;
+    font-family: map-get($fonts, $font-family-h), sans-serif;;
+    padding-bottom: 20px;
+}
+
+@mixin button-mixin {
+    border-radius: 3px;
+    background-color: $button-color;
+    width: 130px;
+    height: 40px;    
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: $sub-color; 
+    cursor: pointer;
+    &:hover {
+        background-color: darken($button-color, 15%);
+    }
+}
+
+@mixin link-mixin($color) {
+    padding: 0 0 0 90px;
+    font-family: map-get($fonts, $font-family-h), sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: $color; 
+    cursor: pointer;
+    &:hover {
+        color: darken($color, 15%);
+    }
+}
+
+.header_button {
+    @include button-mixin;
+}
+
+.login {
+    @include link-mixin($background-main);
+}
+
+.section_text {
+    color: $main-font-color;
+    font-family: map-get($fonts, $font-family-h), sans-serif;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size:22px;
+}
+
+.section_card_wrap {
+    padding: 0 30px 15px 30px;
+}
+
+.section_card {
+    background-color: $background-block;
+    border-radius: 5px;
+    margin: 5px;
+    display: block;
+    overflow: auto;
+    padding:  10px;
+}
+.section_card_right_container {
+    float: right;
+}
+
+.section_card_img {
+    padding: 5px;
+}
+
+.section_card_heading {
+    text-align: center;
+    color: $main-font-color-block; 
+    font-weight: bold;
+    font-size:20px;
+    font-family: map-get($fonts, $font-family-h), sans-serif;
+    padding-top:10px;
+}
+
+.section_card_text {
+    padding: 10px 60px;
+    width: 500px;
+    text-align: justify;
+    color: $text-color-block;
+    font-size: 13px;
+    font-family: map-get($fonts, $text-color-block), sans-serif;
+}
+
+.section_link {
+    @include link-mixin($text-color-block);
+    text-align: center;
+    font-weight: 100;
+    padding: 0px 0px 20px 0px;
+    text-align:center;
+    display:block;
+}
+
+.section_banner {
+    background: linear-gradient(90deg, $gradient-from, $gradient-to);
+    border-radius: 5px;
+    margin: 5px;
+    display: block;
+    overflow: auto;
+    padding:  10px 170px 10px 60px;
+    position: relative;
+    bottom: -50px;
+}
+
+.section_banner_text_wrap {
+    width: 400 px;
+    padding: 10px 100px 10px 50px;
+    float: left;
+}
+
+.section_banner_heading {
+    text-align: left;
+    color: $background-main;
+    font-weight: bold;
+    font-size:20px;
+    font-family: map-get($fonts, $font-family-h), sans-serif;
+}
+
+.section_banner_text {
+    text-align: left;
+    color: $text-color-block;
+    font-size:13px;
+    font-family: map-get($fonts, $font-family-h), sans-serif;
+}
+
+.section_banner_button {
+    @include button-mixin;
+    /*padding: 30px 70px 20px 20px;*/
+    float: right;
+    margin-top: 40px;
+}
+
+.footer {
+    background-color: $background-block;
+}
+
+.footer-wrap {
+    padding: 50px 100px 50px 100px;
+    display: block;
+    overflow: auto;
+}
+
+.footer_logo {
+    float: left;
+    p {
+        color: $text-color-block;
+    }
+}
+
+.footer_text {
+    color: $text-color-block;
+    text-align: justify;
+    width: 400px;
+    margin-left:600px;
+    margin-right:500px;
+}
+
+.footer-cr {
+    float: right;
+    color: $text-color-block;
+}
+
+
+
+main {
+    margin: 0 auto;
+    width: 960px;
+}
