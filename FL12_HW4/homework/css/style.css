@@ -1,0 +1,61 @@
+/*
+#000
+*/
+
+header {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+    height: 70px;
+}
+
+header>h2 {
+    color: #777;
+    width: 200px;
+}
+
+header>nav {
+    vertical-align: center;
+    display: flex;
+    justify-content: space-between;
+    width: 270px;
+}
+
+header>nav>a {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+header>nav>a:link {
+    color: #777;
+}
+
+header>nav>a:first {
+    color: #bfba55;
+}
+
+a:visited {
+    color: #777;
+    text-decoration: none;
+}
+
+a:hover, a:active  {
+    text-decoration: underline;
+    color: #bfba55;
+}
+
+.hello-section {
+    background-image: url(../img/home-bg.jpg);
+    background-position-y: 70px;
+    background-position-x: center;
+    background-size: 100%;
+    height: 100vh;
+    z-index: 1;
+    width: 100vw;
+}
