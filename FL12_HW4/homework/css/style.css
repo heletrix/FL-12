@@ -1,8 +1,5 @@
-/*
-#000
-*/
 
-header {
+.main-header {
     width: 100%;
     position: absolute;
     top: 0px;
@@ -15,28 +12,37 @@ header {
     height: 70px;
 }
 
-header>h2 {
-    color: #777;
-    width: 200px;
+body {
+    margin: 0px;
 }
 
-header>nav {
+main {
+    margin: 0px;
+}
+
+.main-header>h2 {
+    color: #777;
+    width: 200px;
+    text-transform: uppercase;
+}
+
+.main-header>nav {
     vertical-align: center;
     display: flex;
     justify-content: space-between;
     width: 270px;
 }
 
-header>nav>a {
+.main-header>nav>a {
     text-decoration: none;
     font-size: 14px;
 }
 
-header>nav>a:link {
+.main-header>nav>a:link {
     color: #777;
 }
 
-header>nav>a:first {
+.main-header>nav:first-child {
     color: #bfba55;
 }
 
@@ -51,11 +57,111 @@ a:hover, a:active  {
 }
 
 .hello-section {
-    background-image: url(../img/home-bg.jpg);
+    background: url(../img/home-bg.jpg);
+    background-color: rgba(0,0,0,.7);
+    background-blend-mode: darken;
     background-position-y: 70px;
     background-position-x: center;
     background-size: 100%;
+    background-repeat: no-repeat;
     height: 100vh;
-    z-index: 1;
     width: 100vw;
+    z-index: 1;
+    color: white;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hello-section>div>h1 {
+    text-align: center;
+    font-size: 56px;
+}
+
+.hello-section>div>p {
+     text-align: center;
+     font-size: 16px;
+     color: #bfba55;
+     padding-bottom: 40px;
+}
+
+.hello-section>div>button {
+     text-align: center;
+     color: #777;
+     border-radius: 50px;
+     background-color: #FFFFFF;
+     width: 130px;
+     height: 40px;
+     border: none;
+     font-size: 10px;
+     cursor: pointer;
+     text-transform: uppercase;
+     display:block;
+     position: relative;
+     margin:0 auto;
+}
+
+.hello-section>div>button:hover {
+    background-color: #bfba55; 
+}
+
+article {
+    padding: 120vh 200px 0 200px;
+    display:block;
+    position: relative;
+    margin:0 auto;
+    width: 700px;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.main-picture {
+    width: 100%;
+}
+
+.author-picture {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.about {
+   
+    display: flex;
+    align-items: left;
+}
+
+.about>p {
+    padding-left: 20px;
+}
+
+.main-text {
+    color: #777
+}
+
+.continue-reading {
+    color: #777;
+    border-radius: 50px;
+    background-color: #FFFFFF;
+    width: 130px;
+    height: 40px;
+    border: 1px solid #777;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+hr {
+    margin: 30px;
+}
+
+footer {
+    background-color: #000;
+    color: #FFFFFF;
 }
