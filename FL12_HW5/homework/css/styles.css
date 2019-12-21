@@ -29,4 +29,114 @@ body {
 	background: #2d95bb;
 }
 
-/* Your styles go here */
+body {
+  background-color: var(--bg-color--dark);
+  max-width: 800px;
+  margin: 0px auto;
+}
+
+header {
+  background-color: var(--bg-color--header);
+  color: var(--link);
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  font-weight: lighter;
+  float: left;
+  margin: 20px;
+  font-size: 20pt;
+}
+
+h1>span {
+  font-weight: 100;
+  color: #ed5120;
+}
+
+nav {
+  float: right;
+  margin: 0px 40px;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav :last-child {
+  display: none;
+}
+
+nav>a {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 10pt;
+  padding: 28px 10px;
+  color: var(--link);
+}
+
+nav>a:hover {
+  background-color: var(--bg-color--header);
+}
+
+@media screen and (min-width: 1401px) {
+}
+
+@media screen and (max-width: 1400px) {
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0px 8px 0px 8px;
+  }
+  
+  h1 {
+    font-size: 28pt;
+  }
+
+  h1>span {
+    color: #9d27b0;
+  }
+
+  nav>a {
+    display: none;
+    text-decoration: none;
+    padding: 0px 0px;
+    font-size: 28pt;
+    line-height: 13pt;
+  }
+
+  nav>a:hover {
+    background-color: var(--link--hover);
+  }
+
+  nav :last-child {
+    display: inline;
+  }
+
+  header {
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    flex-direction: column-reverse;
+  }
+  
+  nav {
+    margin: 10px;
+    padding: 5px;
+    font-size: 30px;
+    line-height: 10pt;
+    font-weight: 100;
+  }
+
+  h1 {
+    margin: 50px 0px 30px 0px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1>span {
+    color: #ed5120;
+  }
+
+}
+
