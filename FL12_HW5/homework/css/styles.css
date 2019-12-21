@@ -1,17 +1,12 @@
-/*
- * Feel free to change name of colors if you need it
- * Feel free to add new colors if you need it
- */
-:root {
-  --bg-color--dark: #0b192f;
-  --bg-color--header: #024161;
-  --link: #fff;
-  --link--hover: #1f52a4;
-  --bg-footer-color: #024161;
-}
-
 body {
   font-family: roboto;
+  background-color: #0b192f;
+  margin: 0px 0px 0px 0px;
+  display: grid;
+  grid-template-columns: auto 550px 200px auto;
+  grid-template-rows: auto auto auto auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
 }
 .post-1 {
 	background: #9d27b0;
@@ -29,19 +24,9 @@ body {
 	background: #2d95bb;
 }
 
-body {
-  background-color: var(--bg-color--dark);
-  margin: 0px 0px 0px 0px;
-  display: grid;
-  grid-template-columns: auto 550px 200px auto;
-  grid-template-rows: auto auto auto auto;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-}
-
 header {
-  background-color: var(--bg-color--header);
-  color: var(--link);
+  background-color: #024161;
+  color: #fff;
   display: flex;
   justify-content: space-between;
   grid-column-start: 2;
@@ -80,15 +65,20 @@ nav>a {
   font-weight: normal;
   font-size: 10pt;
   padding: 28px 10px;
-  color: var(--link);
+  color: #fff;
 }
 
 nav>a:hover {
-  background-color: var(--link--hover);
+  background-color: #1f52a4;
+  cursor: pointer;
 }
 
 .post-content>p:before, .news>article>p:before{
   content: "Lorem ipsum dolor sit amet, conse ctetuer. Duis autem vemeu iriure dolor adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat wisi enim.";
+}
+
+.news>article>p:before{
+  content:"Lorem ipsum dolor sit amet, conse ctetuer. Duis autem vemeu iriure dolor adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam"
 }
 
 img {
@@ -101,10 +91,10 @@ img {
   grid-row-start: 2;
   grid-row-end: 3;
   padding-top: 10px;
-  color: var(--link);
+  color: #fff;
   background: url(../img/post0.jpg);
   background-size: 100% 100%;
-  height: 250px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -135,27 +125,32 @@ p {
   grid-row-end: 4;
 }
 
-.other-posts>article {
+.post {
   display: flex;
-  color: var(--link);
+  color: #fff;
 }
 
-.other-posts>article:nth-child(even) {
+.post:nth-child(even) {
   flex-direction: row-reverse;
 }
 
-.other-posts>article:nth-child(odd) {
+.post:nth-child(odd) {
   flex-direction: row;
 }
 
-.other-posts>article:last-child>section>p {
+.post:last-child>div>p {
   margin-right: 30px;
 }
 
-.other-posts>article>img {
+.post>img {
   float: right;
   width: 50%;
   height: 200px;
+}
+
+.post>img:hover {
+  opacity: 50%;
+  cursor: pointer;
 }
 
 .date {
@@ -165,17 +160,18 @@ p {
   line-height: unset;
 }
 
-article:nth-child(odd)>.date>p {
+.post:nth-child(odd)>.date>p {
   margin: 20px 10px 0px 0px;
 }
 
-article:nth-child(even)>.date>p {
+.post:nth-child(even)>.date>p {
   margin: 20px 0px 0px 10px;
 }
 
 .date>p {
   font-weight: 200;
   font-size: 12pt;
+  line-height: 6pt;
 }
 
 .date :first-of-type {
@@ -186,7 +182,12 @@ article:nth-child(even)>.date>p {
   margin-top:20px;
 }
 
-article:nth-child(even)>.post-content :first-of-type {
+.post-content>h2:hover {
+  cursor: pointer;
+  opacity: 50%;
+}
+
+.post:nth-child(even)>.post-content :first-of-type {
   margin: 0px 30px 0px 5px;
   text-align: right;
 }
@@ -205,9 +206,9 @@ article:nth-child(even)>.post-content :first-of-type {
 
 .news>article {
   height: auto;
-  background-color: var(--link);
-  padding: 0px 0px 20px 0px;
-  margin: 0px 0px 30px 0px; 
+  background-color: #fff;
+  padding: 0px 0px 15px 0px;
+  margin: 0px 0px 10px 0px; 
 }
 
 .news>article>h2 {
@@ -226,19 +227,20 @@ footer {
   grid-column-end: 4;
   grid-row-start: 4;
   grid-row-end: 5;
-  background-color: var(--bg-footer-color);
+  background-color: #024161;
   display: flex;
 }
 
-footer>section>p {
+footer>div>p {
   margin: 0px 20px 0px 20px;
   color: darkgrey;
+  line-height: 8pt;
+  font-weight: 100;
 }
 
 .copyright {
   margin-top: 20px;
   margin-bottom: 10px;
-  line-height: 14pt;
   float: left;
   width: 85%;
 }
@@ -246,18 +248,16 @@ footer>section>p {
 .author {
   margin-top: 20px;
   margin-bottom: 10px;
-  line-height: 8pt;
   float: right;
   width: 15%;
 }
 
 @media screen and (max-width: 768px) {
   body {
-    margin: 0px 8px 0px 8px;  
     display: grid;
-    grid-template-columns: 0% 70% 30% 0%;
+    grid-template-columns: 0% 66% 28% 0%;
     grid-template-rows: auto auto auto auto;
-    grid-column-gap: 0px;
+    grid-column-gap: 2%;
   }
   
   h1 {
@@ -277,7 +277,7 @@ footer>section>p {
   }
 
   nav>a:hover {
-    background-color: var(--bg-color--header);
+    background-color: #024161;
   }
 
   nav :last-child {
@@ -302,12 +302,89 @@ footer>section>p {
     margin: 50px 0px 30px 0px;
   }
 
-  h2 {
-    margin: 0px 30px 10px 20px;
+  .main-post {
+    background-size: cover;
   }
 
   .main-post>p {
-    margin: 0px 30px 30px 20px;
+    margin: 0px 30px 30px 30px;
+  }
+
+  footer {
+    display: block;
+  }
+
+  .author, .copyright {
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .copyright {
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+
+  .post {
+    flex-flow: row wrap;
+    flex-direction: row;
+  }
+
+  .post:nth-child(even) {
+    flex-flow: row wrap;
+    flex-direction: row;
+  }
+
+  .post>img {
+    width:100%;
+    height: auto;
+    float:left;
+  }
+
+  .post>.post-content {
+    width:90%;
+    float:left;
+  }
+
+  .post-content>p {
+    font-size: 10pt;
+  }
+
+  .post-content>h2 {
+    font-size: 24pt;
+  }
+  
+  .post:nth-child(even)>.post-content :first-of-type {
+    margin: 0px 5px 10px 30px;
+    text-align: left;
+  }
+  
+  .post:nth-child(even)>.date>p {
+    margin: 20px 10px 0px 0px;
+  }
+
+  .post:nth-child(even)>.post-content:nth-child(2) {
+    margin-bottom: 20px;
+  }
+
+  .post:last-child {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .date>p:last-child {
+    margin: 20px 0px 0px 10px;
+    padding-bottom: 15px;
+  }
+
+  .date {
+    width: 10%;
+    float: right;
+  }
+
+  footer>div>p {
+    text-align: center;
+    font-size: 10pt;
+    line-height: 16pt;
   }
 }
 
@@ -317,7 +394,7 @@ footer>section>p {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto auto auto;
-    grid-column-gap: 0px;
+    grid-column-gap: 1%;
   }
 
   header {
