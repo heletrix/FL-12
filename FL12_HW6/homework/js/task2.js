@@ -3,6 +3,9 @@ let numberArr = [];
 let summArr = 0;
 let isExist = true;
 let isCorrectInput = true;
+const C0 = 0;
+const C1 = 1;
+const C2 = 2;
 
 inputArr.push(prompt('Please enter a'));
 inputArr.push(prompt('Please enter b'));
@@ -28,9 +31,9 @@ for (let i=0; i < inputArr.length; i++) {
 }
 
 if (isExist && isCorrectInput) {
-    if (numberArr[0] === numberArr[1] && numberArr[1] === numberArr[2]) {
+    if (numberArr[C0] === numberArr[C1] && numberArr[C1] === numberArr[C2]) {
         console.log('Equilateral triangle');
-    } else if ( numberArr[0] === numberArr[1] || numberArr[1] === numberArr[2] || numberArr[2] === numberArr[0]) {
+    } else if ( numberArr[C0] === numberArr[C1] || numberArr[C1] === numberArr[C2] || numberArr[C2] === numberArr[C0]) {
         console.log('Isosceles triangle');
     } else {
         console.log('Scalene triangle');

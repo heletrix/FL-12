@@ -13,17 +13,17 @@ if (isNaN(Number(aInput)) || Number(aInput) === 0 || aInput.trim() === '') {
             let a = Number(aInput);
             let b = Number(bInput);
             let c = Number(cInput);
-            let cx = 2;
-            let cD = 4;
-            let D = b*b - cD*a*c;
+            const CX = 2;
+            const CD = 4;
+            let D = b*b - CD*a*c;
             if (D < 0) {
                 console.log('no solution');
             } else if (D === 0) {
-                let x = Math.round((-b + Math.sqrt(D))/(cx*a));
+                let x = Math.round((-b + Math.sqrt(D))/(CX*a));
                 console.log('x = ' + x);
             } else {
-                let x1 = Math.round((-b + Math.sqrt(D))/(cx*a));
-                let x2 = Math.round((-b - Math.sqrt(D))/(cx*a));
+                let x1 = Math.round((-b + Math.sqrt(D))/(CX*a));
+                let x2 = Math.round((-b - Math.sqrt(D))/(CX*a));
                 console.log('x1 = ' + x1 + ' and x2 = ' + x2);
             }
         }
