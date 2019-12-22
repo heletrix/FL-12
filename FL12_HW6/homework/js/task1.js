@@ -1,18 +1,18 @@
-let a_input = prompt('Please enter a');
-if (isNaN(Number(a_input)) || Number(a_input) === 0 || a_input.trim() === '') {
+let aInput = prompt('Please enter a');
+if (isNaN(Number(aInput)) || Number(aInput) === 0 || aInput.trim() === '') {
     console.log('Invalid input data');
 } else {
-    let b_input = prompt('Please enter b');
-    if (isNaN(Number(b_input)) || b_input.trim() === '' ) {
+    let bInput = prompt('Please enter b');
+    if (isNaN(Number(bInput)) || bInput.trim() === '' ) {
         console.log('Invalid input data');
     } else {
-        let c_input = prompt('Please enter c');
-        if (isNaN(Number(c_input)) || c_input.trim() === '' ) {
+        let cInput = prompt('Please enter c');
+        if (isNaN(Number(cInput)) || cInput.trim() === '' ) {
             console.log('Invalid input data');
         } else {
-            let a = Number(a_input);
-            let b = Number(b_input);
-            let c = Number(c_input);
+            let a = Number(aInput);
+            let b = Number(bInput);
+            let c = Number(cInput);
             let cx = 2;
             let cD = 4;
             let D = b*b - cD*a*c;
