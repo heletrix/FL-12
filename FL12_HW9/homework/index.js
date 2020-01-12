@@ -11,9 +11,9 @@ function convert() {
 }
 
 function executeforEach(arr, func) {
-    arr.forEach( el => {
-        func(el);
-    });
+    for (let i = 0; i < arr.length; i++) {
+       func(arr[i]);
+   }   
 }
 
 function mapArray(arr, func) {
