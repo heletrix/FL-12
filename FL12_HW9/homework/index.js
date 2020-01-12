@@ -82,7 +82,3 @@ function formatDate(date) {
     let minutes = String(date.getMinutes()).length === 1 ? '0'+date.getMinutes() : date.getMinutes();
     return `${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()} ${hours}:${minutes}`;
 }
-
-console.log(formatDate(new Date('6/15/2018 09:15:00'))); // "2018/6/15 09:15"
-console.log(formatDate(new Date('6/15/2018 09:05:00'))); // "2018/6/15 09:15"
-console.log(formatDate(new Date())); // "2020/1/7 12:56" // gets current local time
