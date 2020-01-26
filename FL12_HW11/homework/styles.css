@@ -1,1 +1,33 @@
-/* Todo: your styles go here*/
+ul {
+    list-style-type: none;
+   
+}
+
+ul li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.file-icon i {
+    color: #BDBFBE;
+}
+
+.folder-icon i {
+    color: #F1BA04;
+}
+
+.empty-folder-text {
+    font-style: italic;
+}
+
+li span {
+    display: flex;
+    align-items: center;
+}
+
+li span:hover {
+    background: #EFEFEF;
+    cursor: pointer;
+  
+}
